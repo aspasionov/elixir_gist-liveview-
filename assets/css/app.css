@@ -1,0 +1,120 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import 'highlight.js/styles/github-dark.min.css';
+
+/* This file is for your main application CSS */
+@font-face {
+  font-family: "WorkSans";
+  src: url("/fonts/WorkSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("/fonts/WorkSans-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.em-gradient {
+  background-image: linear-gradient(to bottom, #631A61, #551653, #340E33, #010101);
+  height: 225px;
+}
+
+form input[type="text"] {
+  @apply bg-emDark-dark font-brand text-white text-xs border-white
+}
+
+form input[type="text"]:focus {
+  @apply focus:outline-none focus:border-emLavander focus:ring-0
+}
+
+.textarea {
+  @apply bg-emDark-dark font-regular font-brand text-white text-xs border-white h-[300px] resize-none mt-0;
+  border-top: none;
+  border-left: none;
+}
+
+.textarea:focus {
+  @apply focus:outline-none focus:border-white focus:ring-0;
+}
+
+.line-number {
+  @apply border border-white font-brand font-regular text-xs text-emDark-light bg-emDark-dark h-[300px] w-[54px] text-right overflow-hidden resize-none;
+  border-right: none;
+  border-top: none;
+}
+
+.line-number:focus {
+  @apply focus:outline-none focus:border-white focus:ring-0;
+}
+
+.create_btn {
+  @apply bg-emPurple border border-white font-brand font-regular text-black text-base;
+}
+
+.create_btn:hover {
+  @apply hover:bg-emPurple-dark text-emDark-light border-emDark-light;
+}
+
+.dd-menu-arrow::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  transform: translateY(-50%);
+  border-width: 0px 5px 5px 5px;
+  border-color: transparent transparent white transparent;
+  border-style: solid;
+}
+
+.menu-item {
+  @apply block px-4 py-2 text-sm text-white font-brand font-regular
+}
+.menu-item:hover {
+  @apply hover:text-emDark-light
+}
+
+.round-image-padding {
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  padding: 4px;
+}
+
+.syntax-area {
+  @apply bg-emSyntax text-xs border-white h-auto border;
+  border-top: none;
+  border-left: none;
+}
+
+.syntax-numbers {
+  @apply border border-white font-brand py-[28px] text-xs text-emDark-light bg-emSyntax h-auto w-[54px] text-right overflow-hidden resize-none;
+  border-right: none;
+  border-top: none;
+}
+
+.syntax-numbers:focus {
+  @apply focus:outline-none focus:border-white focus:ring-0;
+}
+
+.img-down-arrow::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: -10px;
+  transform: translateY(-50%);
+  border-width: 3px 3px 0 3px;
+  border-color: white transparent transparent transparent;
+  border-style: solid;
+}
+
+.action-btn:hover img {
+  filter: brightness(80%);
+  transition: all .3s;
+}
+
+.action-btn:active img {
+  transform: scale(1.1);
+}
