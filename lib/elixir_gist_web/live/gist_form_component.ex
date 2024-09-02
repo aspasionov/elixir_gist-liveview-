@@ -40,6 +40,7 @@ defmodule ElixirGistWeb.GistFormComponet do
       <.form for={@form} phx-submit="create" phx-change="validate" phx-target={@myself}>
         <div class="justify-center px-28 w-full space-y-4 mb-10">
           <.input type="hidden" field={@form[:id]} />
+
           <.input
             field={@form[:description]}
             placeholder="Gist description..."
