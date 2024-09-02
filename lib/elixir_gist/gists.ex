@@ -71,10 +71,7 @@ defmodule ElixirGist.Gists do
 
   """
   def update_gist(%User{} = user, attrs) do
-    attrs |> dbg()
     gist = Repo.get!(Gist, attrs["id"])
-
-    gist |> dbg()
 
     if user.id == gist.user_id do
       gist
