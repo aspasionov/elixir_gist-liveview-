@@ -1,0 +1,8 @@
+<div class="em-gradient !h-auto flex flex-col items-center justify-center">
+  <h1 class="font-brand font-bold text-3xl text-white">All gists</h1>
+  <div class="text-white overflow-auto max-h-[calc(100vh-285px)] w-full max-w-[800px] mx-auto mt-5 px-4">
+    <%= for gist <- @gists do %>
+      <.gist gist={gist} current_user={@current_user} />
+    <% end %>
+  </div>
+</div>

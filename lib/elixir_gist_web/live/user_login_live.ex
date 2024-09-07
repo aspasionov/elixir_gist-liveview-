@@ -3,12 +3,15 @@ defmodule ElixirGistWeb.UserLoginLive do
 
   def render(assigns) do
     ~H"""
-    <div class="mx-auto max-w-sm bg-red">
+    <div class="mx-auto max-w-sm bg-red text-white mt-[100px]">
       <.header class="text-center">
         Log in to account
         <:subtitle>
           Don't have an account?
-          <.link navigate={~p"/users/register"} class="font-semibold text-brand hover:underline">
+          <.link
+            navigate={~p"/users/register"}
+            class="font-semibold text-brand hover:underline text-emLavander-light"
+          >
             Sign up
           </.link>
           for an account now.
@@ -21,7 +24,10 @@ defmodule ElixirGistWeb.UserLoginLive do
 
         <:actions>
           <.input field={@form[:remember_me]} type="checkbox" label="Keep me logged in" />
-          <.link href={~p"/users/reset_password"} class="text-sm font-semibold">
+          <.link
+            href={~p"/users/reset_password"}
+            class="text-sm font-semibold text-sm font-semibold text-emLavander-light"
+          >
             Forgot your password?
           </.link>
         </:actions>

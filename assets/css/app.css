@@ -18,6 +18,26 @@
   font-style: normal;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body  > div[data-phx-main] {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+body  > div[data-phx-main] > main {
+  flex: 1 1 auto;
+}
+
+body  > div[data-phx-main] > footer {
+  margin-top: auto;
+}
+
 .em-gradient {
   background-image: linear-gradient(to bottom, #631A61, #551653, #340E33, #010101);
   height: 225px;
